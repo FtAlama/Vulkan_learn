@@ -6,10 +6,10 @@ CMAKE_FLAGS := -DAPP_NAME=$(APP_NAME)
 
 all: 
 	@if [ ! -f $(BUILD_DIR)/CMakeCache.txt ]; then \
-		echo "==> Initial CMake configure (Debug)"; \
+		echo "==> Initial CMake configure"; \
 		cmake -S . -B $(BUILD_DIR) $(CMAKE_FLAGS); \
 	else \
-		echo "==> CMake already configured — skipping."; \
+		echo "==> CMake already configured."; \
 	fi; \
 	mkdir -p $(LSP_CONFIG); \
 	cp -f $(BUILD_DIR)/compile_commands.json $(LSP_CONFIG)
