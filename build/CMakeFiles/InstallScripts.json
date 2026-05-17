@@ -1,0 +1,10 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/alama/coding/vulkan_learn/build/cmake_install.cmake",
+		"/Users/alama/coding/vulkan_learn/build/dependencies/glfw-3.4/cmake_install.cmake",
+		"/Users/alama/coding/vulkan_learn/build/dependencies/glfw-3.4/src/cmake_install.cmake",
+		"/Users/alama/coding/vulkan_learn/build/dependencies/glfw-3.4/docs/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

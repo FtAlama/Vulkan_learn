@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/test.dir/src/main.cpp.o -o test  -Wl,-rpath,/Users/alama/VulkanSDK/1.4.350.0/macOS/lib dependencies/glfw-3.4/src/libglfw3.a /Users/alama/VulkanSDK/1.4.350.0/macOS/lib/libvulkan.dylib -framework Cocoa -framework IOKit -framework CoreFoundation
