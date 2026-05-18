@@ -1,3 +1,8 @@
+# learning
+
+## Instance
+A Vulkan instance is a global application context that initializes the Vulkan API, loads available drivers, and provides access to physical devices and extensions.
+
 # source
 
 [vulkan pipeline in french](https://vulkan.developpez.com/articles/premier-pas/)
