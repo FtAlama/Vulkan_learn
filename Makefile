@@ -24,6 +24,9 @@ clean:
 	rm -rf $(BUILD_DIR)
 
 fclean: clean
-	rm -rf $(LSP_CONFIG) $(APP_NAME)
+	rm -rf $(APP_NAME)
 
-.PHONY: all run clean fclean
+lclean: fclean
+	rm -rf $(LSP_CONFIG)
+
+.PHONY: all run clean fclean lclean

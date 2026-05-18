@@ -4,10 +4,10 @@
 import vulkan_hpp;
 #endif
 #define GLFW_INCLUDE_VULKAN
+#include "HelloTriangleApplication.hpp"
 #include <GLFW/glfw3.h>
 #include <cstdlib>
 #include <iostream>
-#include "HelloTriangleApplication.hpp"
 
 int main(void) {
   try {
