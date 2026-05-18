@@ -41,6 +41,8 @@ private:
     glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
     window = glfwCreateWindow(WIDTH, HEIGHT, "Vulkan test", nullptr, nullptr);
   }
+ 
+	void initVulkan() { createInstance(); }
 
   void createInstance() {
     constexpr vk::ApplicationInfo appInfo{
@@ -88,8 +90,6 @@ private:
       std::cout << '\t' << extension.extensionName << '\n';
     }
   }
-
-  void initVulkan() { createInstance(); }
 
   void mainLoop() {
     while (!glfwWindowShouldClose(window)) {
