@@ -24,6 +24,14 @@ and each family of queues allows only a subset of commands.
 For example, there could be a queue family that only allows processing of compute commands
 or one that only allows memory transfer related commands.
 
+## Queue
+We need to specify which queues to create knowing that which queue families are available.
+
+## LogicalDevice
+The logical device creation process is similar to the instance creation process
+and describes the features we want to use.
+
+
 -----
 
 # source
