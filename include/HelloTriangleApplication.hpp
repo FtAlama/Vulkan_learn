@@ -36,6 +36,8 @@ private:
   vk::raii::PhysicalDevice physicalDevice = nullptr;
   std::vector<const char *> requiredDeviceExtension = {
       vk::KHRSwapchainExtensionName};
+	vk::raii::Device device = nullptr;
+	vk::raii::Queue graphicsQueue = nullptr;
 
   void initWindow() {
     glfwInit();
@@ -47,11 +49,13 @@ private:
   void initVulkan() {
     createInstance();
     pickPhysicalDevice();
+		createLogicalDevice();
   }
 
   void createInstance();
   bool isDeviceSuitable(vk::raii::PhysicalDevice const &);
   void pickPhysicalDevice();
+	void createLogicalDevice();
 
   void mainLoop() {
     while (!glfwWindowShouldClose(window)) {
