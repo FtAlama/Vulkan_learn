@@ -4,14 +4,15 @@
 
 bool HelloTriangleApplication::isDeviceSuitable(
     vk::raii::PhysicalDevice const &physicalDevice) {
-
   bool supportVulkan1_3 =
       physicalDevice.getProperties().apiVersion >= vk::ApiVersion13;
+
   auto queueFamilies = physicalDevice.getQueueFamilyProperties();
   bool supportGraphics =
       std::ranges::any_of(queueFamilies, [](auto const &qfp) {
         return !!(qfp.queueFlags & vk::QueueFlagBits::eGraphics);
       });
+
   auto availableDeviceExtensions =
       physicalDevice.enumerateDeviceExtensionProperties();
   bool supportAllRequiredExtensions = std::ranges::all_of(
@@ -28,7 +29,6 @@ bool HelloTriangleApplication::isDeviceSuitable(
   auto features = physicalDevice.template getFeatures2<
       vk::PhysicalDeviceFeatures2, vk::PhysicalDeviceVulkan13Features,
       vk::PhysicalDeviceExtendedDynamicStateFeaturesEXT>();
-
   bool supportsRequiredFeatures =
       features.template get<vk::PhysicalDeviceVulkan13Features>()
           .dynamicRendering &&
