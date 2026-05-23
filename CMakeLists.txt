@@ -9,6 +9,8 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_executable(${APP_NAME}
 	src/main.cpp
+	src/HelloTriangle/0_createInstance.cpp
+	src/HelloTriangle/1_pickPhysicalDevice.cpp
 )
 
 
