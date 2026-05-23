@@ -11,6 +11,7 @@ add_executable(${APP_NAME}
 	src/main.cpp
 	src/HelloTriangle/0_createInstance.cpp
 	src/HelloTriangle/1_pickPhysicalDevice.cpp
+	src/HelloTriangle/2_createLogicalDevice.cpp
 )
 
 
